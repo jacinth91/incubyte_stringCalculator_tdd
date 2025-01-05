@@ -9,7 +9,8 @@ export function add(numbers:string){
     return parseInt(numbers, 10);
   }
 
-  const nums = numbers.split(',');
+  const newNumbers = numbers.replace(/\n/g, ',');
+  const nums = newNumbers.split(',');
   let sum = 0;
   for (const num of nums) {
     sum += parseInt(num, 10);

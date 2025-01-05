@@ -9,4 +9,7 @@ describe('StringCalculator', () => {
     it('should return the value of a single number', () => {
       expect(add('1')).toBe(1);
     });
+    it('should return the sum of two comma-separated numbers', () => {
+      expect(add('1,5')).toBe(6);
+    });
 });

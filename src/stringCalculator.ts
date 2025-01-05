@@ -9,5 +9,11 @@ export function add(numbers:string){
     return parseInt(numbers, 10);
   }
 
-  return 0;
+  const nums = numbers.split(',');
+  let sum = 0;
+  for (const num of nums) {
+    sum += parseInt(num, 10);
+  }
+
+  return sum;
 }

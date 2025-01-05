@@ -5,20 +5,10 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "moduleResolution": "node",     // or "node16" if you want more strict ESM rules
+    "isolatedModules": true,        // required for ts-jest to handle each file
+    "noEmit": true,                 // don't output .js files when you run tsc
+    "strict": true
   },
   "include": ["src"]
 }
